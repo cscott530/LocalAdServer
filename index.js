@@ -43,6 +43,7 @@ app.use('/adserve/', function(req, res) {
    const width = size.split('x')[0];
    const height = size.split('x')[1];
    const kw = pathAsObject.kw;
+   // Using picsum because it returns a random image.
    const imageUrl = `https://picsum.photos/${width}/${height}`
    let json = {
       status: 'SUCCESS',
@@ -52,7 +53,6 @@ app.use('/adserve/', function(req, res) {
             target:`_blank`,
             redirect_url: `https://emarketer.com`,
             // body: `<img src="https://picsum.photos/${width}/${height}" alt="${kw}" />`,
-            // Using picsum because it returns a random image.
             image_url: imageUrl,
             alt_text: kw,
             width: width,
@@ -65,5 +65,5 @@ app.use('/adserve/', function(req, res) {
 
 // Start the Proxy
 app.listen(PORT, HOST, () => {
-   console.log(`Starting Proxy at ${HOST}:${PORT}`);
+   console.log(`Starting ad server at ${HOST}:${PORT}`);
 });

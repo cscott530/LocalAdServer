@@ -4,11 +4,9 @@ I didn't want to have a bunch of conditional logic for serving up ads.
 
 ## Running/Usage
 
-`npm run start` will start the server at `localhost:3000`.
-
-## Other project usage:
-
-In the project that's displaying ads, simply set the ad server url to `http://localhost:3000`, and make sure it's set to not serve up the static `TEST_AD` values, if applicable. The paths and variables that are otherwise in place for preview/production should match what this server accepts.
+- `npm run start` will start the server at `localhost:3000`.
+- To consume ads, in the project that's displaying ads, set the ad server url to `http://localhost:3000`, and make sure it's set to not serve up the static `TEST_AD` values, if applicable. 
+- The paths and variables that are otherwise in place for preview/production should match what this server accepts.
 
 ## Notes
 
